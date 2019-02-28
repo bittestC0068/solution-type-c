@@ -39,6 +39,21 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
-		return true;
+		
+		if(answer > randomNumber && answer <=100) {
+			max = answer;
+			count++;
+			return false;
+		} else if(answer < randomNumber && answer >= 1){
+			min = answer;
+			count++;
+			return false;
+		} else if(answer > 100 || answer < 1) {
+			System.out.println("1~100의 숫자를 입력해주세요.");
+			return false;
+		} else {
+			count++;
+			return true;
+		}
 	}
 }
